@@ -1,7 +1,18 @@
 # mHM-SPAEF-SpatialCalibration-EGU2024
 
-## Progressive assessment of multivariate parameter estimation in distributed hydrological modelling using spatial patterns of remote sensing data  
+## Introduction
+This repository supports the EGU 2024 study titled "Progressive assessment of multivariate parameter estimation in distributed hydrological modelling using spatial patterns of remote sensing data." The research highlights challenges in traditional hydrological model calibration, which typically relies on observed flow records. Despite efforts, these estimations often show significant inconsistencies, even when modeled flows closely match observed data. The study employs the mesoscale hydrologic model (mHM) and integrates spatial patterns from remote sensing data to address these calibration challenges.
 
-Hydrological models are traditionally calibrated using observed flow records. This challenge is magnified in distributed modeling due to the increased dimensionality of the problem, where parameters must be estimated for hydrologically homogeneous subareas (HRUs). Regardless, the estimated flows can present significant inconsistencies, even though the modeled flows are quite similar to those observed. Products derived from remote sensing techniques have been employed to circumvent this problem. In summary, spatial patterns of hydroclimatological variables are used to assess the consistency of the modeled flows. In this study, the mesoscale hydrologic model (mHM) was used to simulate a mesoscale basin in Brazil, located in the savanna biome. In addition to the flows monitored at different fluvial stations, estimates of actual evapotranspiration (AET) and total water stored in the basin (TWS) obtained from remote sensing were used for parameter calibration. Comparison occurred from scenarios where these variables were considered independently, in pairs, and together. The similarity between monitored and modeled flows was assessed using KGE metric, while spatial similarity was characterized through the SPAEF. In the multi-objective scenarios, these indices were aggregated using weightings to compose a single objective function. The results obtained demonstrated that similar degrees of agreement between flows can be obtained for completely disparate spatial flows. Furthermore, the spatial consistency of these flows generally implies a reduction in the similarity between flows. Lastly, the weightings proved to be an interesting alternative, meriting further analysis, as they facilitate the definition of priorities in the search for optimal solutions.
+## About the Study
+The mesoscale hydrologic model (mHM) and the SPAtial EFficiency metric (SPAEF) are central to our simulations, testing various scenarios where remote sensing data patterns are integrated into the calibration process. This method allows for a nuanced understanding of hydrological processes across different spatial scales.
 
-Moreira, V., Silva, F., and Welerson, C.: Progressive assessment of multivariate parameter estimation in distributed hydrological modelling using spatial patterns of remote sensing data, EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024, EGU24-790, https://doi.org/10.5194/egusphere-egu24-790, 2024.
+## Technical Methodology
+We utilized the OSTRICH tool to enhance the mHM model by integrating created objective functions for calibration process.
+
+## References
+OSTRICH Citation: Matott, LS. 2017. OSTRICH: an Optimization Software Tool, Documentation and User's Guide, Version 17.12.19. University at Buffalo Center for Computational Research. Link.
+
+SPAEF Citation: Koch, J., Demirel, M. C., Stisen, S. 2018. "The SPAtial EFficiency metric (SPAEF): multiple-component evaluation of spatial patterns for optimization of hydrological models." Geoscientific Model Development, 11(5), 1873–1886. Link, DOI: 10.5194/gmd-11-1873-2018.
+
+EGU 24 research: Moreira, V., Silva, F., and Welerson, C.: Progressive assessment of multivariate parameter estimation in distributed hydrological modelling using spatial patterns of remote sensing data, EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024, EGU24-790, https://doi.org/10.5194/egusphere-egu24-790, 2024.
+
