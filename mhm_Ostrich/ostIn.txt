@@ -1,0 +1,112 @@
+#ProgramType ParaPADDS ShuffledComplexEvolution
+ProgramType DDS
+
+
+ModelExecutable .\call_mhmPYost.bat
+# Need to change for differents calibrations
+ModelSubdir Q_KGE_spaef_tws_evp											
+ObjectiveFunction GCOP
+#PreserveModelOutput no
+PreserveBestModel SaveBest_Serial_Q_KGE.bat
+OstrichWarmStart yes
+
+RandomSeed 14535
+
+BeginFilePairs
+aOST_cal_20par.tpl ; mhm_parameter.nml
+EndFilePairs
+
+BeginExtraFiles
+mhm.nml
+mhm_outputs.nml
+mhm_parameter.nml
+mrm.nml
+mrm_outputs.nml
+ObjFUNC_KGE_SPAEF_EVP.py
+mrm_parameter.nml
+run_mhm.bat
+SaveBest_Serial_Q_KGE.py
+aOST_cal_20par.tpl
+EndExtraFiles
+
+BeginExtraDirs
+Rio_Velhas
+best
+EndExtraDirs
+
+
+#Real-valued Parameters
+BeginParams
+1CIF	1.899706E-01,	0.15	0.4	none	none	none	free
+2STT	1.140737E+00,	-2	9	none	none	none	free
+3DDF_F	3.437793E+00,	0.0001	4	none	none	none	free
+4DDF_I	2.259429E-01,	0	1	none	none	none	free
+5DDF_P	1.522708E+00,	0	2	none	none	none	free
+6IDDFP	2.684557E-01,	0.1	0.9	none	none	none	free
+7MDDF_F	3.191886E+00,	0	8	none	none	none	free
+8MDDF_I	2.166484E+00,	0	12	none	none	none	free
+9MDDF_P	4.863362E+00,	0	15	none	none	none	free
+1OMC_F	6.204473E+02,	0	750	none	none	none	free
+2OMC_I	4.129665E+00,	0	4.5	none	none	none	free
+3OMC_P	1.466112E-01,	0	4	none	none	none	free
+4PTF_L665_Cnst	6.609746E-01,	0.6462	1.9706	none	none	none	free
+5PTF_L665_CL	1.986137E-02,	0.0001	0.1129	none	none	none	free
+6PTF_L665_Db	-3.698225E-01,	-0.3727	-0.1871	none	none	none	free
+7PTF_H665_Cnst	7.305391E-01,	0.5358	1.1232	none	none	none	free
+8PTF_H665_CL	-3.040167E-03,	-0.0055	0.0099	none	none	none	free
+9PTF_H665_Db	-1.544988E-01,	-0.5513	-0.0913	none	none	none	free
+1PTF_Ks_Cst	-7.785813E-01,	-1.2	-0.285	none	none	none	free
+2PTF_Ks_S	7.381164E-03,	0.006	0.026	none	none	none	free
+3PTF_Ks_Cl	1.171953E-02,	0.003	0.013	none	none	none	free
+4PTF_Ks_CS	8.475579E+01,	60.96	100	none	none	none	free
+5RFC_F	9.981197E-01,	0.9	0.999	none	none	none	free
+6RFC_I	9.472101E-01,	0.5	0.95	none	none	none	free
+7RFC_P	1.600324E-03,	0.001	0.09	none	none	none	free
+8ISF	1.396609E+00,	1	4	none	none	none	free
+9ISC	5.951305E+01,	0	60	none	none	none	free
+1MC_FP	9.483058E-01,	0.7	2.5	none	none	none	free
+2MC_FP	1.603314E-01,	0	0.5	none	none	none	free
+3ATP	1.602237E+02,	160	200	none	none	none	free
+4HSC	1.747997E-03,	0.0016	0.003	none	none	none	free
+5ISCF	9.334452E+01,	75	200	none	none	none	free
+6IR_S	2.535258E+00,	0	10	none	none	none	free
+7FIR_F	1.862798E+00,	1	3	none	none	none	free
+8SIR_K	2.185202E+01,	1	30	none	none	none	free
+9ESI	8.559784E-02,	0.05	0.3	none	none	none	free
+1RC	1.797202E+01,	0	50	none	none	none	free
+2RF_K	3.099859E+00,	-5	5	none	none	none	free
+3GL_GWR_K	2.127530E+00,	1	5	none	none	none	free
+4SF	2.739699E+01,	0.1	50	none	none	none	free
+5GP1	9.456583E+03,	1	10000	none	none	none	free
+6GP2	3.964765E+03,	1	10000	none	none	none	free
+7GP3	9.988967E+03,	1	10000	none	none	none	free
+8GP4	6.765511E+03,	1	10000	none	none	none	free
+9GP5	6.437851E+03,	1	10000	none	none	none	free
+1GP6	5.839360E+03,	1	10000	none	none	none	free
+2GP7	4.003739E+03,	1	10000	none	none	none	free
+3GP8	3.768835E+03,	1	10000	none	none	none	free
+4GP9	6.885933E+03,	1	10000	none	none	none	free
+EndParams
+
+# Need to change for differents calibrations
+BeginResponseVars
+#name   	    filename               		keyword				line    col     token     augmented?	
+Q_KGE_SPAEF_EVP_TWS   		.\TSEB_SPAEF_KGE_SPAEF_TWS.out ;		Q_KGE_SPAEF_EVP_TWS					0       2       ' '       yes		
+EndResponseVars
+
+# Need to change for differents calibrations
+BeginGCOP
+CostFunction		Q_KGE_SPAEF_EVP_TWS
+PenaltyFunction APM	
+EndGCOP
+
+BeginConstraints
+EndConstraints
+
+BeginDDSAlg
+PerturbationValue 0.2
+MaxIterations 4000
+UseRandomParamValues
+EndDDSAlg
+
+

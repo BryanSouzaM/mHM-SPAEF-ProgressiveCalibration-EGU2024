@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------
+ OSTRICH version 17.12.19 (Built Dec 19 2017 @ 11:07:06)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2007 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : .\call_mhmPYost.bat > OstExeOut.txt
+Algorithm              : Dynamically Dimensioned Search Algorithm (DDS)
+Objective Function     : GCOP
+Number of Parameters   : 49
+Number of Tied Params  : 0
+Number of Observations : 0
+Seed for Random Nums.  : 14535
+Number of Resp. Vars        : 1
+Number of Tied Resp. Vars   : 0
+Number of Constraints       : 0
+Penalty Method              : Additive Penalty Method (APM)
+
+Ostrich Run Record
+trial    best fitness   Q_KGE_SPAEF_EVP_TWS  1CIF          2STT          3DDF_F        4DDF_I        5DDF_P        6IDDFP        7MDDF_F       8MDDF_I       9MDDF_P       1OMC_F        2OMC_I        3OMC_P        4PTF_L665_Cnst  5PTF_L665_CL  6PTF_L665_Db  7PTF_H665_Cnst  8PTF_H665_CL  9PTF_H665_Db  1PTF_Ks_Cst   2PTF_Ks_S     3PTF_Ks_Cl    4PTF_Ks_CS    5RFC_F        6RFC_I        7RFC_P        8ISF          9ISC          1MC_FP        2MC_FP        3ATP          4HSC          5ISCF         6IR_S         7FIR_F        8SIR_K        9ESI          1RC           2RF_K         3GL_GWR_K     4SF           5GP1          6GP2          7GP3          8GP4          9GP5          1GP6          2GP7          3GP8          4GP9           trials remaining
+1     6.108840E-01  6.108840E-01  4.000000E-01  1.500000E-01  1.000000E-04  1.000000E-04  1.989277E-264  9.000000E-01  9.000000E-01  8.000000E+00  1.576072E-52  1.177558E-76  4.500000E+00  4.000000E+00  1.970600E+00  1.129000E-01  -1.871000E-01  5.358000E-01  9.900000E-03  -9.130000E-02  -2.850000E-01  6.000000E-03  6.000000E-03  6.096000E+01  9.990000E-01  9.000000E-01  9.000000E-02  1.000000E+00  1.000000E+00  7.000000E-01  5.000000E-01  1.600000E+02  3.000000E-03  7.500000E+01  1.000000E+01  1.000000E+00  3.000000E+00  3.000000E-01  5.000000E-02  2.161723E-48  5.000000E+00  1.000000E+00  1.000000E+00  1.000000E+04  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+04  1.000000E+04  1.000000E+04  3.999000E+03

@@ -1,0 +1,93 @@
+ !global_parameters
+                                     !PARAMETER           lower_bound           upper_bound                 value      FLAG  SCALING
+ ! interception
+ &interception1
+                       canopyInterceptionFactor =     0,       0.400000000000,       1.666299E-01,        1,       1
+ /
+  
+ ! snow
+ &snow1
+                       snowTreshholdTemperature =     -2.000000000000,       9.000000000000,       3.016728E+00,        1,       1
+                         degreeDayFactor_forest =      0.000000000000,       4.000000000000,       1.105433E+00,        1,       1
+                     degreeDayFactor_impervious =      0.000000000000,       1.000000000000,       1.831266E-01,        1,       1
+                       degreeDayFactor_pervious =      0.000000000000,       2.000000000000,       1.133523E+00,        1,       1
+                increaseDegreeDayFactorByPrecip =      0.000000000000,       0.900000000000,       8.881376E-01,        1,       1
+                      maxDegreeDayFactor_forest =      0.000000000000,       8.000000000000,       1.636558E+00,        1,       1
+                  maxDegreeDayFactor_impervious =      0.000000000000,      12.000000000000,       2.427836E+00,        1,       1
+                    maxDegreeDayFactor_pervious =      0.000000000000,      15.000000000000,       1.065764E+01,        1,       1
+ /
+  
+ ! soilmoisture
+ &soilmoisture1
+                        orgMatterContent_forest =      0.000000000000,     750.000000000000,       7.076056E+02,        1,       1
+                    orgMatterContent_impervious =      0.000000000000,       4.500000000000,       1.597008E+00,        1,       1
+                      orgMatterContent_pervious =      0.000000000000,       4.000000000000,       2.687531E+00,        1,       1
+                         PTF_lower66_5_constant =      0.000000000000,       1.970600000000,       1.231488E+00,        1,       1
+                             PTF_lower66_5_clay =      0.000000000000,       0.112900000000,       4.798194E-02,        1,       1
+                               PTF_lower66_5_Db =     -0.372700000000,      0.187100000000,       -3.437667E-01,        1,       1
+                        PTF_higher66_5_constant =      0.000000000000,       1.123200000000,       1.032341E+00,        1,       1
+                            PTF_higher66_5_clay =     -0.005500000000,       0.009900000000,       3.579352E-03,        1,       1
+                              PTF_higher66_5_Db =     -0.551300000000,      0.091300000000,       -3.444672E-01,        1,       1
+                                PTF_Ks_constant =     -1.200000000000,      0.285000000000,       -9.386302E-01,        1,       1
+                                    PTF_Ks_sand =      0.000000000000,       0.026000000000,       1.540554E-02,        1,       1
+                                    PTF_Ks_clay =      0.000000000000,       0.013000000000,       4.269935E-03,        1,       1
+                              PTF_Ks_curveSlope =      0.000000000000,     100.000000000000,       6.662454E+01,        1,       1
+                 rootFractionCoefficient_forest =      0.000000000000,       0.999000000000,       9.588210E-01,        1,       1
+             rootFractionCoefficient_impervious =      0.000000000000,       0.950000000000,       7.157240E-01,        1,       1
+               rootFractionCoefficient_pervious =      0.000000000000,       0.090000000000,       2.935907E-02,        1,       1
+                        infiltrationShapeFactor =      0.000000000000,       4.000000000000,       3.947850E+00,        1,       1
+ /
+  
+ ! directSealedAreaRunoff
+ &directRunoff1
+                      imperviousStorageCapacity =      0.000000000000,      60.000000000000,      1.528786E+01,        1,       1
+ /
+  
+ ! potential evapotranspiration
+ &PET1
+                         minCorrectionFactorPET =      0.000000000000,       2.500000000000,       2.067887E+00,        1,       1
+                         maxCorrectionFactorPET =      0.000000000000,       0.500000000000,       4.489869E-01,        1,       1
+                              aspectTresholdPET =      0.000000000000,     200.000000000000,       1.684461E+02,        1,       1
+                          HargreavesSamaniCoeff =      0.000000000000,       0.003000000000,       1.646997E-03,        1,       1
+ /
+  
+ ! interflow
+ &interflow1
+                 interflowStorageCapacityFactor =     0.000000000000,     200.000000000000,     1.216748E+02,        1,       1
+                       interflowRecession_slope =      0.000000000000,      10.000000000000,       1.333612E+00,        1,       1
+                  fastInterflowRecession_forest =      0.000000000000,       3.000000000000,       2.998526E+00,        1,       1
+                      slowInterflowRecession_Ks =      0.000000000000,      30.000000000000,      30,        1,       1
+                          exponentSlowInterflow =      0.000000000000,       0.300000000000,       2.262967E-01,        1,       1
+ /
+  
+ ! percolation
+ &percolation1
+                            rechargeCoefficient =      0.000000000000,      50.000000000000,      50,        1,       1
+                         rechargeFactor_karstic =     -5.000000000000,       5.000000000000,       -1.815346E+00,        1,       1
+                  gain_loss_GWreservoir_karstic =      0.000000000000,       5.000000000000,       1.984063E+00,        1,       1
+ /
+  
+ ! routing
+ &routing3
+                                   slope_factor =      0.000000000000,      50.000000000000,      1.753287E+01,        1,       1
+ /
+  
+ ! geology
+ &geoparameter
+                                  GeoParam(1,:) =      0.000000000000,   10000.000000000000,    8.931776E+03,        1,       1
+                                  GeoParam(2,:) =      0.000000000000,   10000.000000000000,    8.610178E+03,        1,       1
+                                  GeoParam(3,:) =      0.000000000000,   10000.000000000000,    6.175283E+03,        1,       1
+                                  GeoParam(4,:) =      0.000000000000,   10000.000000000000,    5.990216E+03,        1,       1
+                                  GeoParam(5,:) =      0.000000000000,   10000.000000000000,    8.239674E+03,        1,       1
+                                  GeoParam(6,:) =      0.000000000000,   10000.000000000000,    2.167661E+03,        1,       1
+                                  GeoParam(7,:) =      0.000000000000,   10000.000000000000,    7.808461E+03,        1,       1
+                                  GeoParam(8,:) =      0.000000000000,   10000.000000000000,    4.116717E+03,        1,       1
+                                  GeoParam(9,:) =      0.000000000000,   10000.000000000000,    1.371591E+03,        1,       1
+ /
+  
+ ! neutrons
+ /
+  
+ !    
+ /
+  
