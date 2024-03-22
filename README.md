@@ -1,4 +1,4 @@
-# mHM-SPAEF-SpatialCalibration-EGU2024
+# mHM-SPAEF-ProgressiveCalibration-EGU2024
 
 ## Introduction
 This repository supports the EGU 2024 study titled "Progressive assessment of multivariate parameter estimation in distributed hydrological modelling using spatial patterns of remote sensing data." The research highlights challenges in traditional hydrological model calibration, which typically relies on observed flow records. Despite efforts, these estimations often show significant inconsistencies, even when modeled flows closely match observed data. The study employs the mesoscale hydrologic model (mHM) and integrates spatial patterns from remote sensing data to address these calibration challenges.
