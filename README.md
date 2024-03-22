@@ -9,6 +9,12 @@ The mesoscale hydrologic model (mHM) and the SPAtial EFficiency metric (SPAEF) a
 ## Technical Methodology
 We utilized the OSTRICH tool to enhance the mHM model by integrating created objective functions for calibration process.
 
+Due to storage limitations, the entire model can be downloaded from https://www.dropbox.com/scl/fi/w5lqxaepx35in3z5smg7z/mHM_Ostrich.zip?rlkey=tqc9whjp2o3vtukwwbfggx45g&dl=0
+
+Simply run OSTRICH.bat.
+
+For additional calibrations, update the ostIn file.
+
 ## References
 OSTRICH Citation: Matott, LS. 2017. OSTRICH: an Optimization Software Tool, Documentation and User's Guide, Version 17.12.19. University at Buffalo Center for Computational Research. Link.
 
